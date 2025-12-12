@@ -4,13 +4,14 @@ import TimeStamp from './TimeStamp';
 
 const ChatEntry = (props) => {
   const { sender, body, timeStamp } = props;
+  console.log('Received TimeStamp:', timeStamp);
   return (
     <section className="chat-entry local">
       <h2 className="entry-name">{sender}</h2>
       <section className="entry-bubble">
         <p>{body}</p>
         <p className="entry-time">
-          <TimeStamp timeStamp={timeStamp}/>
+          <TimeStamp time={timeStamp}/>
         </p>
         <button className="like">🤍</button>
       </section>
