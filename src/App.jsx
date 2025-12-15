@@ -38,7 +38,11 @@ function App () {
 
   return (
 
-    <div className="chat between Vladimir and Estragon">
+    <div className="App">
+      <header>
+        <h1>Vladimir and Estragon's Chatlog</h1>
+        <h2>{totalLikes} ❤️s</h2>
+      </header>
       <ChatLog
         entries={messages}
         onMessageLike={handleMessageLike}
