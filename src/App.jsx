@@ -35,9 +35,11 @@ function App () {
 
   const totalLikes = countTotalLikes(messages);
 
+  const LOCAL_SENDER = 'Vladimir';
+
   return (
 
-    <div className="App">
+    <div className="chat between Vladimir and Estragon">
       <header>
         <h1>Vladimir and Estragon's Chatlog</h1>
         <h2>{totalLikes} ❤️s</h2>
