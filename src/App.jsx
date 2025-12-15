@@ -1,5 +1,5 @@
 import './App.css';
-import messages from './data/messages.json';
+import initalMessagesData from './data/messages.json';
 import ChatLog from './components/ChatLog.jsx';
 import { useState } from 'react';
 // import ChatEntry from './components/ChatEntry.jsx';
@@ -19,7 +19,7 @@ const countTotalLikes = messages => {
 };
 
 function App () {
-  const [initialMessages, setMessages] = useState(messages);
+  const [messages, setMessages] = useState(initalMessagesData);
 
   const handleMessageLike = (messageId) => {
     setMessages((prevMessages) => {
