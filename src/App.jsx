@@ -19,8 +19,7 @@ const countTotalLikes = messages => {
 };
 
 function App () {
-  const initialMessages = messages;
-  const [messages, setMessages] = useState(initialMessages);
+  const [initialMessages, setMessages] = useState(messages);
 
   const handleMessageLike = (messageId) => {
     setMessages((prevMessages) => {
