@@ -3,7 +3,7 @@ import ChatEntry from './ChatEntry';
 import PropTypes from 'prop-types';
 
 function ChatLog(props) {
-  const {entries, onMessageLike} = props;
+  const {entries, onMessageLike, localSender} = props;
 
   return (
     <div className="chat-log">
@@ -16,6 +16,7 @@ function ChatLog(props) {
           timeStamp={message.timeStamp}
           liked={message.liked}
           onMessageLike={onMessageLike}
+          localSender={localSender}
         />
       ))}
     </div>
@@ -31,6 +32,7 @@ ChatLog.propTypes = {
       timeStamp: PropTypes.string.isRequired,
       liked: PropTypes.bool.isRequired,
       onMessageLike: PropTypes.func.isRequired,
+      localSender: PropTypes.string.isRequired,
     })
   ).isRequired,
 };
